@@ -14,15 +14,13 @@ class CreateGoodsTable extends Migration
     public function up()
     {
         Schema::create('goods', function (Blueprint $table) {
-            $table->increments('id');
-    $table->string('goods_code', 6);
-    $table->string('goods_name', 255);
-    $table->string('standard', 255);
-    $table->integer('price');
-    $table->string('maker', 255);
-    $table->timestamp('release_date')->nullable();
-    $table->timestamp('handling_date')->nullable();
-    $table->timestamps();
+            $table->bigIncrements('id');
+            $table->string('goods_name');
+            $table->string('size');
+            $table->integer('price');
+            $table->timestamp('release_date')->nullable();
+            $table->timestamp('handling_date')->nullable();
+            $table->timestamps();
         });
     }
 
