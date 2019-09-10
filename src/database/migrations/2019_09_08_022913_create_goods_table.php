@@ -18,6 +18,9 @@ class CreateGoodsTable extends Migration
             $table->string('goods_name');
             $table->string('size');
             $table->integer('price');
+            $table->string('title'); // 商品名を保存するカラム
+            $table->string('body');  // 商品説明するカラム
+            $table->string('image_path')->nullable();  // 商品画像のパスを保存するカラム
             $table->timestamp('release_date')->nullable();
             $table->timestamp('handling_date')->nullable();
             $table->timestamps();
